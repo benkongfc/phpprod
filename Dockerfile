@@ -1,7 +1,7 @@
 from php:5.6-apache
 RUN a2enmod rewrite headers && \
 apt-get update && \
-apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev libz-dev libmemcached-dev libmemcached11 libmemcachedutil2 imagemagick && \
+apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev libz-dev libmemcached-dev libmemcached11 libmemcachedutil2 imagemagick wget && \
 docker-php-ext-install mysql mysqli opcache && \
 docker-php-ext-configure gd --with-jpeg-dir --with-freetype-dir && \
 docker-php-ext-install gd && \
