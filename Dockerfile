@@ -4,7 +4,7 @@ apt-get update && \
 apt-get install -y libpng-dev libjpeg-dev libfreetype6-dev libz-dev libmemcached-dev libmemcached11 libmemcachedutil2 imagemagick wget && \
 docker-php-ext-install mysql mysqli opcache && \
 docker-php-ext-configure gd --with-jpeg-dir --with-freetype-dir && \
-docker-php-ext-install gd && \
+docker-php-ext-install gd zip && \
 pecl install memcache && \
 echo opcache.enable=1 > /usr/local/etc/php/conf.d/opcache-recommended.ini && \
 echo opcache.revalidate_freq=2 >> /usr/local/etc/php/conf.d/opcache-recommended.ini && \
